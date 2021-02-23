@@ -1,8 +1,12 @@
-// import React, {useState} from "react";
+import React, {useState} from "react";
 import Comment from "./Comment";
 
 function Comments({comments }) { 
-    console.log(comments)
+
+    const [hide, setHide] = useState(true)
+    
+
+
     const commentItems = comments.map((comment) => (
         // return comment.id comment.user comment.comment
         
@@ -11,20 +15,16 @@ function Comments({comments }) {
 
 
         function hideFunction(){
-                // const [hide, setHide] = useState()
 
-
-                // {link ? (
-                //     <p>
-                //       <a href={link}>Link</a>
-                //     </p>
-                //   ) : null}
+            // {condition ? true : false}
+            {hide ? setHide(false): setHide(true)}
+            console.log("state", hide)
 
         }
         return (
             <div> 
-                <button onClick = {hideFunction}> Hide Comments</button>
-                <div> {commentItems} </div>
+                <button onClick = {hideFunction}> {hide ? "Hide Comments" : "Show Comments"} </button>
+                <div> {hide ? commentItems : null} </div>
             </div>
 
             )
