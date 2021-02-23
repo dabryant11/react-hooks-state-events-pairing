@@ -8,8 +8,9 @@ import Comments from "./Comments";
 
 
 function App() {
-  console.log("Here's your data:", video);
-
+  // console.log("Here's your data:", video);
+  
+  // console.log(video.comments)
   return (
     <div className="App">
       <Video embedUrl = {video.embedUrl} title = {video.title} />
@@ -17,7 +18,6 @@ function App() {
       <Views views = {video.views} createdAt = {video.createdAt}/>
       <Buttons upvotes = {video.upvotes} downvotes = {video.downvotes}/>
       <Comments comments = {video.comments} />
-      
     </div>
   );
 }

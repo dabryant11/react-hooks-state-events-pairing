@@ -2,9 +2,10 @@ import React, {useState} from "react";
 
 
 function Buttons({upvotes, downvotes }) { 
-    
-    const [up, setUp] = useState(9210)
-    const [down, setDown] = useState(185)
+    // console.log(upvotes)
+    const [up, setUp] = useState(upvotes)
+    const [down, setDown] = useState(downvotes)
+
     function handleClick(e) {
         if(e.target.name === "up"){
             setUp(up + 1)
@@ -13,8 +14,6 @@ function Buttons({upvotes, downvotes }) {
             setDown(down - 1)
         }
     }
-    
-    
     
     
     return (
