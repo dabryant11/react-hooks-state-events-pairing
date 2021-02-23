@@ -18,9 +18,8 @@ function Buttons({upvotes, downvotes }) {
     
     return (
         <div>
-
-<button name = "up"  onClick = {handleClick} > {up} 👍🏾</button>
-<button name = "down"  onClick = {handleClick}> {down} 👎</button>
+                <button name = "up"  onClick = {handleClick} > {up} 👍🏾</button>
+                <button name = "down"  onClick = {handleClick}> {down} 👎</button>
         </div>
     )
 }

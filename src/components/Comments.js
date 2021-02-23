@@ -1,3 +1,4 @@
+// import React, {useState} from "react";
 import Comment from "./Comment";
 
 function Comments({comments }) { 
@@ -7,9 +8,24 @@ function Comments({comments }) {
         
         <Comment key={comment.id} user={comment.user} comment={comment.comment}/>
         ))
+
+
+        function hideFunction(){
+                // const [hide, setHide] = useState()
+
+
+                // {link ? (
+                //     <p>
+                //       <a href={link}>Link</a>
+                //     </p>
+                //   ) : null}
+
+        }
         return (
-            
+            <div> 
+                <button onClick = {hideFunction}> Hide Comments</button>
                 <div> {commentItems} </div>
+            </div>
 
             )
         }
